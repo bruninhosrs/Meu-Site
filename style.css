@@ -1,0 +1,18 @@
+:root {
+  --azulCiano: #0ea5e9;
+  --magenta: #db2777;
+  --grafite: #111827;
+  --offWwhite: #f9fafb;
+  --cinzaCarvao: #0b0f14;
+  --cinzaClaro: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--grafite);
+}
