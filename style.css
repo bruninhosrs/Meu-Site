@@ -112,7 +112,7 @@ header a:hover {
   width: 395px;
   border-radius: 10px;
   position: relative;
-  animation: soft-bounce 2.4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+  animation: soft-bounce 5s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
   /* transform-style: preserve-3d;
   animation: tilt 6s ease-in-out infinite; */
   /* animation: glow 3s ease-in-out infinite; */
@@ -129,6 +129,16 @@ header a:hover {
   animation: ring 2.2s ease-out infinite;
 } */
 
+#sobre-mim {
+  padding: 80px 4%;
+}
+
+#sobre-mim .flex {
+  /* text-align: center; */
+  /* align-items: center; */
+  gap: 60px;
+}
+
 #sobre-mim h2 {
   text-align: center;
   text-transform: uppercase;
@@ -138,7 +148,22 @@ header a:hover {
 }
 
 .apresentacao-sobre p {
-  text-align: center;
+  font-size: 1.2rem;
+}
+
+.tecnologia-texto {
+  color: var(--azulCiano);
+  font-weight: bold;
+}
+
+/* #js {
+  height: 32px;
+  width: 32px;
+} */
+
+#react {
+  height: 32px;
+  width: 32px;
 }
 
 /* @keyframes flutuar {
