@@ -24,25 +24,6 @@ body {
   display: flex;
 }
 
-/* .cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.2em;
-  margin-left: 5px;
-  background-color: #fff;
-  animation: blink-cursor 1s step-end infinite;
-}
-
-@keyframes blink-cursor {
-  from,
-  to {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #fff;
-  }
-} */
-
 header {
   padding: 40px 4%;
   /* position: fixed;
@@ -57,6 +38,8 @@ header {
   z-index: 1000; */
   background-color: var(--cinzaCarvao);
 }
+
+/* CABEÇALHO */
 
 .interface {
   max-width: 1280px;
@@ -98,13 +81,36 @@ header a:hover {
   padding: 0 40px;
 }
 
+/* ANIMAÇÃO EM JS */
 #apresentacao {
   padding: 40px 4%;
-  /* background-color: var(--magenta); */
+  background-color: var(--magenta);
 }
 
+/* SOBRE MIM */
 #sobre-mim {
   padding: 40px 4%;
+}
+
+#sobre-mim .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 48px;
+  align-items: flex-start;
+}
+
+#sobre-mim .interface h2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#sobre-mim .img-sobre {
+  flex: 0 0 395px;
 }
 
 #minha-foto {
@@ -113,38 +119,21 @@ header a:hover {
   border-radius: 10px;
   position: relative;
   animation: soft-bounce 5s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
-  /* transform-style: preserve-3d;
-  animation: tilt 6s ease-in-out infinite; */
-  /* animation: glow 3s ease-in-out infinite; */
-  /* animation: breathe 5s ease-in-out infinite; */
-  /* animation: flutuar 2s ease-in-out infinite alternate; */
 }
 
-/* #minha-foto::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  animation: ring 2.2s ease-out infinite;
-} */
-
-#sobre-mim {
-  padding: 80px 4%;
+@keyframes soft-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
 }
 
-#sobre-mim .flex {
-  /* text-align: center; */
-  /* align-items: center; */
-  gap: 60px;
-}
-
-#sobre-mim h2 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: bold;
+#sobre-mim .apresentacao-sobre {
+  flex: 1 1 420px;
+  min-width: 380px;
 }
 
 .apresentacao-sobre p {
@@ -156,75 +145,27 @@ header a:hover {
   font-weight: bold;
 }
 
-/* #js {
-  height: 32px;
-  width: 32px;
-} */
-
-#react {
-  height: 32px;
-  width: 32px;
+#sobre-mim .redes-sociais {
+  display: flex;
+  gap: 20px;
+  margin-top: 16px;
+  justify-content: center;
 }
 
-/* @keyframes flutuar {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: 30px;
-  }
-} */
+#sobre-mim .redes-sociais a {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  color: var(--azulCiano);
+  transition: transform 0.1s, opacity 0.15s;
+}
 
-/* @keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
-  }
-} */
+#sobre-mim .redes-sociais a:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
 
-/* @keyframes glow {
-  0%,
-  100% {
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
-  }
-  50% {
-    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.35);
-  }
-} */
-
-/* @keyframes ring {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(1.25);
-    opacity: 0;
-  }
-} */
-
-/* @keyframes tilt {
-  0%,
-  100% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  25% {
-    transform: rotateX(6deg) rotateY(-6deg);
-  }
-  75% {
-    transform: rotateX(-6deg) rotateY(6deg);
-  }
-} */
-
-@keyframes soft-bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-8px);
-  }
+#sobre-mim .redes-sociais a svg {
+  width: 100%;
+  height: 100%;
 }
